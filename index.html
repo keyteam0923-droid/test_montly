@@ -179,7 +179,7 @@
       })
       .then(data => {
         const banner = document.getElementById('status-banner');
-        banner.innerHTML = `아이디 수집률 <span class="highlight">${data.signupRate}</span> (${data.baseDate} 기준)`;
+        banner.innerHTML = `아이디 수집률 <span class="highlight">${data.collectingRate}</span> (${data.baseDate} 기준)`;
       })
       .catch(error => {
         console.error('Data loading error:', error);
