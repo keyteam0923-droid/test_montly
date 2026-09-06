@@ -50,7 +50,7 @@
       margin-bottom: 0.8rem;
     }
 
-    /* 2. 중간에 들어갈 가입률 배너 스타일 */
+    /* 2. 중간에 들어갈 수집률 배너 스타일 */
     .status-banner {
       display: inline-flex;
       align-items: center;
@@ -144,7 +144,7 @@
       <!-- 1. 범솔음원총공 -->
       <div><span class="tag-badge">범솔음원총공</span></div>
       
-      <!-- 2. 아이디 가입률 배너 -->
+      <!-- 2. 아이디 수집률 배너 -->
       <div class="status-banner" id="status-banner">
         데이터를 불러오는 중...
       </div>
@@ -179,7 +179,7 @@
       })
       .then(data => {
         const banner = document.getElementById('status-banner');
-        banner.innerHTML = `아이디 가입률 <span class="highlight">${data.signupRate}</span> (${data.baseDate} 기준)`;
+        banner.innerHTML = `아이디 수집률 <span class="highlight">${data.signupRate}</span> (${data.baseDate} 기준)`;
       })
       .catch(error => {
         console.error('Data loading error:', error);
