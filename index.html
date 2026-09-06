@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>범솔아이디취합</title>
+  <style>
+    :root {
+      --accent: #79e5cb;
+      --bg-start: #f9fffd;
+      --bg-end: #dff8ef;
+      --card-bg: rgba(255, 255, 255, 0.6);
+      --card-border: rgba(255, 255, 255, 0.9);
+      --text-main: #1a1f2a;
+      --text-sub: #4b5563;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Inter", "Pretendard", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 20% 20%, var(--bg-start) 0%, var(--bg-end) 80%);
+      padding: 2rem;
+    }
+    .page-wrap {
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+    }
+    .page-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: var(--text-main);
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media (min-width: 640px) {
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .card-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .card-link:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    }
+    .card-img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+    .cta-button {
+      background: var(--accent);
+      color: #0f172a;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 999px;
+      padding: 0.6rem 1rem;
+      display: inline-block;
+      box-shadow: 0 6px 14px rgba(121,229,203,0.4);
+      transition: all 0.2s ease;
+    }
+    .card-link:hover .cta-button {
+      box-shadow: 0 8px 18px rgba(121,229,203,0.5);
+      transform: scale(1.03);
+    }
+    .tag-badge {
+      display: inline-block;
+      background: rgba(121,229,203,0.2);
+      color: var(--text-main);
+      font-weight: 500;
+      font-size: 0.9rem;
+      border-radius: 999px;
+      padding: 0.4rem 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="page-wrap">
+    <!-- HEADER -->
+    <header class="page-header">
+      <div class="tag-badge">범솔음원총공</div>
+      <div class="page-title">이번 달 아이디를 제출해주세요</div>
+    </header>  
+
+    <section class="cards-grid">
+      <!-- GENIE CARD -->
+      <a class="card-link" href="https://monthly-ids.key-team0923.workers.dev/go/genie" target="_blank" rel="noopener noreferrer">
+        <img src="genie.png" alt="genie logo" class="card-img" />
+        <div class="card-title">지니 아이디를 제출해주세요</div>
+        <span class="cta-button">폼 연결 링크 →</span>
+      </a>
+
+      <!-- BUGS CARD -->
+      <a class="card-link" href="https://monthly-ids.key-team0923.workers.dev/go/bugs" target="_blank" rel="noopener noreferrer">
+        <img src="bugs.png" alt="bugs logo" class="card-img" />
+        <div class="card-title">Bugs 아이디를 제출해주세요</div>
+        <span class="cta-button">폼 연결 링크 →</span>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
